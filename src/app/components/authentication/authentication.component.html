@@ -1,0 +1,41 @@
+<div class="content">
+    <div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form #signupform="ngForm"   >
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" name="username"placeholder="User name" required #username="ngModel" ngModel >
+					<span *ngIf="username.invalid  && username.touched">
+						Plese enter a user name
+					</span>
+					<input type="email" name="email"placeholder="Email" required #email="ngModel" email  ngModel >
+					<span *ngIf="email.invalid  && email.touched">
+						Plese enter a user Email
+					</span>
+					<input type="password" name="password" placeholder="Password" minlength="8" maxlength="13" #password="ngModel"  required  ngModel >
+					<span *ngIf="password.invalid  && password.touched">
+						Plese enter a password
+					</span>
+					<button class="lbtn" type="button" (click)="onsignup(signupform.value)" >Sign up</button>
+				</form>
+			</div>
+            <!-- class="lbtn" type="submit" (onSubmit)="onsignup(signup.value)" [disabled]="signupform.invalid"  -->
+			<div class="login">
+				<form #loginform="ngForm">
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email"placeholder="Email" required #email="ngModel" email  ngModel >
+					<span *ngIf="email.invalid  && email.touched">
+						Plese enter a user Email
+					</span>
+					<input type="password" name="password" placeholder="Password" minlength="8" maxlength="13" #password="ngModel"  required  ngModel >
+					<span *ngIf="password.invalid  && password.touched">
+						Plese enter a password
+					</span>
+					<!-- <app-register style="width: 100%x;height: 10px;margin-top: 1rem;"></app-register> -->
+					<button class="lbtn"  type="button" (click)="onlogin(loginform.value)"  >Login</button>
+				</form>
+			</div>
+	</div>
+</div>
+ <!-- {{key}} -->

@@ -1,0 +1,38 @@
+*{
+  margin :0;
+  padding: 0;
+
+}
+
+.content{
+  padding-top: 30px;
+  border-top: 1px;
+  border-top-style: solid;
+  list-style-type: none;
+  width: 200px;
+
+}
+
+
+a{
+  width: 80%;
+  display: block;
+  color: #000;
+  font-weight: 700;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.item:hover a:hover{
+  background-color: #555;
+  color: whitesmoke;
+  /* transition: all 0.7s ease; */
+}
+i{
+  margin-right: 3px;
+}
+.foot{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
