@@ -1,13 +1,24 @@
 # Bank Money Transfer Tracking
 
-# npm install 
+## steps to setup
 
-#npm start
+> To Start a clint
 
-#open new CMD
+###### open a new CMD
+```
+npm install 
 
-#cd server
+npm start
+```
+> To Start a Server
 
-#npm install
+###### open new CMD
 
-#npm start
+```
+
+cd server
+
+npm install
+
+npm start
+```
