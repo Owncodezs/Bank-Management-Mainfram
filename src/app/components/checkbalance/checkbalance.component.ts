@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenStorageService } from 'src/app/shares/token-storage.service';
 
 @Component({
   selector: 'app-checkbalance',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckbalanceComponent implements OnInit {
 
-  constructor() { }
+  constructor(public tokenstorages:TokenStorageService  ) { }
+  data:any
+  
 
   ngOnInit(): void {
+    this.data=this.tokenstorages.getUser()
   }
+  
 
 }

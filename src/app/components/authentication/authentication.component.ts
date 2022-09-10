@@ -5,7 +5,7 @@ import {  Router } from '@angular/router';
 @Component({
   selector: 'app-authentication',
   templateUrl: './authentication.component.html',
-  styleUrls: ['./authentication.component.css']
+  styleUrls: ['./authstyle.scss']
 })
 export class AuthenticationComponent implements OnInit {
 
@@ -23,17 +23,24 @@ export class AuthenticationComponent implements OnInit {
     })
     
   }
+  mylogo:any="../../assets/Bank-of-India.png"
   mydata:any
   onlogin(data:any){
+    data.cif_no=parseInt(data.cif_no)
+    data.ac_no=parseInt(data.ac_no)
     console.log('main')
     this.auth.login(data) .subscribe(res => {
       alert(res.message)
       this.tokenstorages.saveToken(res.token)
+      this.tokenstorages.saveUser(res.ac_no)
       console.log('storage',this.tokenstorages.getToken())
       this.router.navigate(['/dashbord'])
       console.log("key",res)
-
     })
-  }  
+    
+  } 
+  forget(){
+    this.router.navigate(['/changepass'])
+  } 
 
 }

@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  baseURL: string = "http://localhost:4000/api/";
+  baseURL: string = "http://localhost:4000/auth/";
   constructor(private http :HttpClient,private tockenStorage:TokenStorageService ,private router:Router) { }
   newuser(data:any):Observable<any>{
     console.log('new user...')

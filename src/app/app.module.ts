@@ -13,6 +13,7 @@ import { CheckbalanceComponent } from './components/checkbalance/checkbalance.co
 import { QuicktransferComponent } from './components/quicktransfer/quicktransfer.component';
 import { ViewstatementComponent } from './components/viewstatement/viewstatement.component';
 import { QuickenComponent } from './components/quicken/quicken.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -25,7 +26,8 @@ import { QuickenComponent } from './components/quicken/quicken.component';
     CheckbalanceComponent,
     QuicktransferComponent,
     ViewstatementComponent,
-    QuickenComponent
+    QuickenComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

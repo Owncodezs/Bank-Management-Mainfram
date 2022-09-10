@@ -1,21 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { MyserveService } from '../myserve.service';
+
 
 @Component({
   selector: 'app-addproduct',
   templateUrl: './addproduct.component.html',
-  styleUrls: ['./addproduct.component.css']
+  styleUrls: ['./authstyle.scss']
 })
 export class AddproductComponent implements OnInit {
 
 
-  constructor(private myservice:MyserveService ) { }
+  constructor( ) { }
 
 
 
 
   ngOnInit(): void {
+  }
+  onchange(data:any){
+ 
   }
 
 }
