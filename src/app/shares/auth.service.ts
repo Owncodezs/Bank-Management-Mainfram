@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
+  
   baseURL: string = "http://localhost:4000/auth/";
   constructor(private http :HttpClient,private tockenStorage:TokenStorageService ,private router:Router) { }
   newuser(data:any):Observable<any>{
@@ -26,15 +27,16 @@ export class AuthService {
   }
  
   canActivate():Observable<any> {
-    const headers = { 'content-type': 'application/json'}  
-    const body=JSON.stringify({token:window.sessionStorage.getItem('auth-token')}); 
+
+    const headers = { 'content-type': 'application/json'}
+    const body=JSON.stringify({token:this.tockenStorage.getToken()});
     console.log(body)
-    return this.http.post(`${this.baseURL}check`, body,{'headers':headers})
-    // console.log('responces',res)
-    // if () {
-    //   this.router.navigate(['login']);
-    //   return false;
-    // }
-    // return true;
+    return this.http.post(`${this.baseURL}check`,body,{'headers':headers})
   }
+  logout():Observable<any>{
+    const headers = { 'content-type': 'application/json'}
+    const body=JSON.stringify({token:this.tockenStorage.getToken()});
+    console.log(body)
+    return this.http.post(`${this.baseURL}logout`,body,{'headers':headers})
+   }
 }

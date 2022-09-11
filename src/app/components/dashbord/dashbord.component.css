@@ -1,6 +1,6 @@
 
 .left{
-    background-color: #FFDEB4;
+    background:linear-gradient(to left, #9E8FB2,#A7ACD9);
     display: flex;
     float: left;   
     height: 100%;
@@ -9,7 +9,7 @@
     
 }
 .right{
-    background-color: #FFF9CA;
+    background-color: #f5feff;
     float: right;
     height: 100vh;
     overflow: auto;

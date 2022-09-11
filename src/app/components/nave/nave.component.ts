@@ -11,14 +11,20 @@ import { TokenStorageService } from 'src/app/shares/token-storage.service';
 export class NaveComponent implements OnInit {
 
   constructor(private auth:AuthService ,private tokenstorages:TokenStorageService ,private router:Router) { } 
-  mylogo:any="../../assets/logo.png"
+  mylogo:any="../../assets/Bank-of-India.png"
   loginstatus:any="login"
   ngOnInit(): void {
   }
 
   signout() {
-    this.tokenstorages.signOut()
-    console.log('kali')
-  }
+    this.auth.logout().subscribe(res => {
+
+        alert(res.message)
+        if(res.status){
+          localStorage.clear();
+          this.router.navigate(['/login'])
+        }
+      })
+    }
 
 }

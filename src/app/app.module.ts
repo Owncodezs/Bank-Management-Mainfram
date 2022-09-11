@@ -14,6 +14,7 @@ import { QuicktransferComponent } from './components/quicktransfer/quicktransfer
 import { ViewstatementComponent } from './components/viewstatement/viewstatement.component';
 import { QuickenComponent } from './components/quicken/quicken.component';
 import { LoginComponent } from './components/login/login.component';
+import { ProfilService } from './shares/profil.service';
 
 
 
@@ -36,7 +37,7 @@ import { LoginComponent } from './components/login/login.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [AuthService,TokenStorageService],
+  providers: [AuthService,TokenStorageService,ProfilService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

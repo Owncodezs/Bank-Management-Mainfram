@@ -31,11 +31,16 @@ export class AuthenticationComponent implements OnInit {
     console.log('main')
     this.auth.login(data) .subscribe(res => {
       alert(res.message)
-      this.tokenstorages.saveToken(res.token)
-      this.tokenstorages.saveUser(res.ac_no)
-      console.log('storage',this.tokenstorages.getToken())
-      this.router.navigate(['/dashbord'])
-      console.log("key",res)
+      // alert(res.token)
+      if(res.status){
+        this.tokenstorages.saveToken(res.token)
+        this.tokenstorages.saveUser(res.ac_no)
+        console.log('storage',this.tokenstorages.getToken())
+        this.router.navigate(['/dashbord'])
+      }
+      else
+        this.router.navigate(['/login'])
+      
     })
     
   } 
