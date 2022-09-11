@@ -1,70 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Form</title>
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-</head>
-<body>
+
+
 <div class="wrapper">
     <h2>Payment Form</h2>
-    <form method="POST">
+    <form #transferform="ngForm">
         <h4>Sender Details</h4>
         <div class="input-group">
             <div class="input-box">
-                <input type="text" placeholder="Name" required class="sname">
+                <input type="text" placeholder="Acount Number"  class="sname" name="from_ac" id="from_ac" autocomplete="off" required #from_ac="ngModel"ngModel>
                 <i class="fa fa-user icon"></i>
-            </div>
-        </div>
-        <div class="input-group">
-            <div class="input-box">
-                <input type="email" placeholder="Email Adress" required class="sname">
-                <i class="fa fa-envelope icon"></i>
             </div>
         </div>
         <h4>Receiver Details</h4>
         <div class="input-group">
             <div class="input-box">
-                <input type="text" placeholder="Name" required class="rname">
+                <input type="text" placeholder="Acount Number"  class="rname" name="to_ac" id="to_ac" autocomplete="off" required #to_ac="ngModel"ngModel>
+                <i class="fa fa-user icon"></i>
+            </div>
+        </div>
+        <h4>Payment Details</h4>
+        <div class="input-group">
+            <div class="input-box">
+                <input type="text" placeholder="Details"  class="rname" name="details" id="details" autocomplete="off" required #details="ngModel"ngModel>
                 <i class="fa fa-user icon"></i>
             </div>
         </div>
         <div class="input-group">
             <div class="input-box">
-                <input type="email" placeholder="Email Adress" required class="rname">
-                <i class="fa fa-envelope icon"></i>
-            </div>
-        </div>
-        <div class="input-group">
-            <div class="input-box">
-                <h4>Payment Details</h4>
-                <input type="radio" name="pay" id="bc1" checked class="radio">
-                <label for="bc1"><span><i class="fa fa-cc-visa"></i> Credit Card</span></label>
-                <input type="radio" name="pay" id="bc2" class="radio">
-                <label for="bc2"><span><i class="fa fa-cc-visajio0"></i> Debit card</span></label>
-            </div>
-        </div>
-        <div class="input-group">
-            <div class="input-box">
-                <input type="tel" placeholder="Card Number" required class="c-no">
-                <i class="fa fa-credit-card icon"></i>
-            </div>
-        </div>
-        <div class="input-group">
-            <div class="input-box">
-                <input type="tel" placeholder="Card CVC" required class="cvc">
+                <input type="text" placeholder="Amount"  class="rname" name="amount" id="amount" autocomplete="off" required #amount="ngModel"ngModel>
                 <i class="fa fa-user icon"></i>
             </div>
         </div>
         <div class="input-group">
             <div class="input-box">
-                <button type="submit">TRANSFER</button>
-            </div>=git
+                <button type="button" (click)="ontransfer(transferform.value)">TRANSFER</button>
+            </div>
         </div>
     </form>
 </div>
-</body>
+
 
 

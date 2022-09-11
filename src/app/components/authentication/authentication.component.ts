@@ -21,7 +21,7 @@ export class AuthenticationComponent implements OnInit {
       alert(res.message)
       console.log("key",res)
     })
-    
+     
   }
   mylogo:any="../../assets/Bank-of-India.png"
   mydata:any

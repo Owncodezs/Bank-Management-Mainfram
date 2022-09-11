@@ -30,7 +30,6 @@ export class ViewstatementComponent implements OnInit {
       if(res.status){
         if(this.count!=undefined){
           this.items=res.data
-          this.items.slice(0, 1)
         }
         else{
           this.items=res.data
