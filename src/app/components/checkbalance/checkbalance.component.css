@@ -1,0 +1,27 @@
+/* .cname
+{
+    text-align: right;
+} */
+.table
+{
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.content
+{
+    border: 1px solid;
+}
+.container-inner
+{
+    width:300px;
+    display:flex;
+    align-items:center;
+}
+.container-inner img
+{
+    width:100px;
+    margin-right:20px;
+    height:100px;
+
+}
