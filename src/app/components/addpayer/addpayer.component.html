@@ -1,0 +1,31 @@
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+<div class="wrapper">
+    <h2>AddPayer Form</h2>
+    <form #payerform="ngForm">
+        <h4>New Payer Name</h4>
+        <div class="input-group">
+            <div class="input-box">
+                <input type="text" placeholder="Acount Number"  class="sname" name="payer_name" id="payer_name" autocomplete="off" required #from_ac="ngModel"ngModel>
+                <i class="fa fa-user icon"></i>
+            </div>
+        </div>
+        <h4>Acount No</h4>
+        <div class="input-group">
+            <div class="input-box">
+                <input type="text" placeholder="Acount Number"  class="rname" name="payer_acno" id="payer_acno" autocomplete="off" required #payer_acno="ngModel"ngModel>
+                <i class="fa fa-user icon"></i>
+            </div>
+        </div>
+        <div class="input-group">
+            <div class="input-box">
+                <button type="button" (click)="onadd(payerform.value)">ADD</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+

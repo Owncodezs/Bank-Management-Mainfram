@@ -32,10 +32,17 @@ export class ProfilService {
     return this.http.post(`${this.baseURL}transfer`, body,{'headers':headers})
   }
   viewpayer(data:any):Observable<any>{
-    console.log('viewstatement...')
+    console.log('viewpayer...')
     const headers = { 'content-type': 'application/json'}  
     const body=JSON.stringify(data);
     console.log(body)
     return this.http.post(`${this.baseURL}statement`, body,{'headers':headers})
+  }
+  addpayer(data:any):Observable<any>{
+    console.log('addpayer...')
+    const headers = { 'content-type': 'application/json'}  
+    const body=JSON.stringify(data);
+    console.log(body)
+    return this.http.post(`${this.baseURL}addpayer`, body,{'headers':headers})
   }
 }

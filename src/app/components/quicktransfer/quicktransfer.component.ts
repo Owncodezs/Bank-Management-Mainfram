@@ -18,7 +18,7 @@ export class QuicktransferComponent implements OnInit {
       // alert(res.message)
       if(res.status){
        this.to_acs=res.data
-        
+        console.log(this.to_acs)
       }})
     
   }
@@ -37,6 +37,11 @@ export class QuicktransferComponent implements OnInit {
         this.router.navigate(['/dashbord/quicktransfer'])
       
     })
+    
+  }
+  onaddpayer(){
+    console.log('hi')
+    this.router.navigate(['/dashbord/addpayer'])
   }
 
 }

@@ -5,7 +5,7 @@
 <div class="wrapper">
     <h2>Payment Form</h2>
     <form #transferform="ngForm">
-        <h4>Sender Details</h4>
+        <div style="display:flexbox ;"><h4>Sender Details</h4><a (click)="onaddpayer()">addpayer</a></div>
         <div class="input-group">
             <div class="input-box">
                 <input type="text" placeholder="Acount Number"  class="sname" name="from_ac" id="from_ac" autocomplete="off" required #from_ac="ngModel"ngModel>
@@ -13,9 +13,14 @@
             </div>
         </div>
         <h4>Receiver Details</h4>
+       
         <div class="input-group">
             <div class="input-box">
-                <input type="text" placeholder="Acount Number"  class="rname" name="to_ac" id="to_ac" autocomplete="off" required #to_ac="ngModel"ngModel>
+                <!-- <input type="" placeholder="Acount Number"  class="rname" name="to_ac" id="to_ac" autocomplete="off" required #to_ac="ngModel"ngModel> -->
+                <select placeholder="Acount Number"  class="rname" name="to_ac" id="to_ac" autocomplete="off" required #to_ac="ngModel"ngModel ><option *ngFor="let title of to_acs" [value]="title.Value" >
+                    {{title.ac_no}}
+                  </option>
+                </select>
                 <i class="fa fa-user icon"></i>
             </div>
         </div>

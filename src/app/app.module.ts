@@ -15,6 +15,7 @@ import { ViewstatementComponent } from './components/viewstatement/viewstatement
 import { QuickenComponent } from './components/quicken/quicken.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProfilService } from './shares/profil.service';
+import { AddpayerComponent } from './components/addpayer/addpayer.component';
 
 
 
@@ -28,7 +29,9 @@ import { ProfilService } from './shares/profil.service';
     QuicktransferComponent,
     ViewstatementComponent,
     QuickenComponent,
-    LoginComponent
+    LoginComponent,
+    AddpayerComponent
+    
   ],
   imports: [
     BrowserModule,

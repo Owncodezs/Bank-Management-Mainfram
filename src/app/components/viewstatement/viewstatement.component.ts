@@ -20,21 +20,25 @@ export class ViewstatementComponent implements OnInit {
       return data
     }
   }
-  default:string='No Transaction Found'
-
+  
+  default:any
   ngOnInit(): void {
     
     this.profil.viewstatement({token:this.tokenStorage.getToken()}).subscribe(res => {
       // alert(res.message)
       console.log(this.count)
       if(res.status){
+        if(Object.keys(res.data).length==0){
+          this.default='No Transaction Found'
+        }
+        else{
         if(this.count!=undefined){
           this.items=res.data
         }
         else{
           this.items=res.data
         }
-        
+      }
       }})
       
   }
