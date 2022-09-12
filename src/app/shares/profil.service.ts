@@ -23,7 +23,7 @@ export class ProfilService {
     const body=JSON.stringify(data);
     console.log(body)
     return this.http.post(`${this.baseURL}checkbalance`, body,{'headers':headers})
-  }
+  } 
   transfer(data:any):Observable<any>{
     console.log('transfer...')
     const headers = { 'content-type': 'application/json'}  
@@ -36,7 +36,7 @@ export class ProfilService {
     const headers = { 'content-type': 'application/json'}  
     const body=JSON.stringify(data);
     console.log(body)
-    return this.http.post(`${this.baseURL}statement`, body,{'headers':headers})
+    return this.http.post(`${this.baseURL}viewpayer`, body,{'headers':headers})
   }
   addpayer(data:any):Observable<any>{
     console.log('addpayer...')

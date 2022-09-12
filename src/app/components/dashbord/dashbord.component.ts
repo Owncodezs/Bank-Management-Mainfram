@@ -12,11 +12,11 @@ export class DashbordComponent implements OnInit {
   constructor(private auth:AuthService ,private router:Router ) { }
 
   ngOnInit(): void {
-    // this.auth.canActivate().subscribe(res => {
-    //   alert(res.message)
-    //   if(res.status==false){
-    //     this.router.navigate(['/login'])
-    //   }})
+    this.auth.canActivate().subscribe(res => {
+      alert(res.message)
+      if(res.status==false){
+        this.router.navigate(['/login'])
+      }})
   }
  
 }

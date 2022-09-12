@@ -17,8 +17,8 @@
         <div class="input-group">
             <div class="input-box">
                 <!-- <input type="" placeholder="Acount Number"  class="rname" name="to_ac" id="to_ac" autocomplete="off" required #to_ac="ngModel"ngModel> -->
-                <select placeholder="Acount Number"  class="rname" name="to_ac" id="to_ac" autocomplete="off" required #to_ac="ngModel"ngModel ><option *ngFor="let title of to_acs" [value]="title.Value" >
-                    {{title.ac_no}}
+                <select placeholder="Acount Number"  class="rname" name="to_ac" id="to_ac" autocomplete="off" required #to_ac="ngModel"ngModel ><option *ngFor="let title of to_acs" [value]="title.payer_acno" >
+                    {{title.payer_acno}}
                   </option>
                 </select>
                 <i class="fa fa-user icon"></i>
