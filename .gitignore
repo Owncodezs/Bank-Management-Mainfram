@@ -4,7 +4,6 @@
 .angular
 .vscode
 /src
-
 /tmp
 /out-tsc
 /bazel-out
